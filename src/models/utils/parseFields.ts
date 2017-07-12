@@ -5,4 +5,3 @@ export const parseFields = (fields: [IField]) =>
     fields.map(field => Field(field))
         .map(field => `    ${field}`)
         .join('\n');
-        
