@@ -8,7 +8,7 @@
     "start": "yarn run clean && yarn build && node build/index.js",
     "build": "tsc -p tsconfig.json",
     "build:dev": "yarn build -- -w",
-    "test": "jest --coverage",
+    "test": "jest --coverage && codecov",
     "test:dev": "jest --watchAll"
   },
   "devDependencies": {
