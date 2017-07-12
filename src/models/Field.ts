@@ -1,4 +1,4 @@
-import { IField } from "../model";
+import { IField } from "./interfaces";
 
 const Field = (f: IField) => `${f.name} = models.${f.type}`
 

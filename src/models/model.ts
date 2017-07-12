@@ -1,9 +1,8 @@
-export interface IModel {
-    name: string;
-    fields: [IField]
-}
+import { IModel, IField } from "./interfaces";
+import { parseFields } from './utils';
 
-export interface IField {
-    name: string;
-    type: string;
-}
+const Model = (model: IModel) =>
+`class ${model.name}(models.Model):
+${parseFields(model.fields)}`
+
+export default Model;
