@@ -1,5 +1,5 @@
 import { IField } from "../interfaces/index";
-import Field from '../Field';
+import Field from '../field';
 
 export const parseFields = (fields: [IField]) =>
     fields.map(field => Field(field))
