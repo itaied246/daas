@@ -48,6 +48,3 @@ describe("parse django model", () => {
     })
 
 })
-
-
-
