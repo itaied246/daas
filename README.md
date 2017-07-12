@@ -1,4 +1,5 @@
-![build](https://travis-ci.org/itaied246/daas.svg?branch=master)
+[![Build Status](https://travis-ci.org/itaied246/daas.svg?branch=master)](https://travis-ci.org/itaied246/daas)
+[![codecov](https://codecov.io/gh/itaied246/daas/branch/master/graph/badge.svg)](https://codecov.io/gh/itaied246/daas)
 
 # daas (Data as a Service)
 
