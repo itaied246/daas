@@ -1,3 +1,5 @@
+![build](https://travis-ci.org/itaied246/daas.svg?branch=master)
+
 # gen-djan
 
 Generate `django-graphene` backend from designed models is `JSON` format.
