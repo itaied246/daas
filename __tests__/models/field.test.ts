@@ -1,4 +1,4 @@
-import Field from '../../src/models/field';
+import { Field } from '../../src/models';
 import { IField } from "../../src/models/interfaces";
 
 const assertField = 

@@ -1,4 +1,4 @@
-import Model from '../../src/models/model';
+import { Model } from '../../src/models';
 import { IModel } from "../../src/models/interfaces";
 
 const assertModel =
