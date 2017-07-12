@@ -1,5 +1,24 @@
-import { generateModel } from '../src/models/generateModel';
-import { Model } from '../src/models/model';
+import { generateModel, parseFields } from '../src/models/generateModel';
+import { IModel, IField } from '../src/models/model';
+
+test("django fields conversion", () => {
+    const fields: [IField] = [
+        {
+            name: "a",
+            type: "integer"
+        },
+        {
+            name: "b",
+            type: "string"
+        }
+    ]
+
+    const expected =
+        `    a = models.IntegerField()
+    b = models.TextField()`
+
+    expect(parseFields(fields)).toBe(expected);
+})
 
 test("single field", () => {
 
@@ -12,7 +31,7 @@ class Tire(models.Model):
         return self.width
 `
 
-    const actual: Model = {
+    const actual: IModel = {
         name: "Tire",
         fields: [
             {
@@ -37,7 +56,7 @@ class Tire(models.Model):
         return self.width
 `
 
-    const actual: Model = {
+    const actual: IModel = {
         name: "Tire",
         fields: [
             {

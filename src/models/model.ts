@@ -1,9 +1,9 @@
-export interface Model {
+export interface IModel {
     name: string;
-    fields: [Field]
+    fields: [IField]
 }
 
-export interface Field {
+export interface IField {
     name: string;
     type: string;
 }

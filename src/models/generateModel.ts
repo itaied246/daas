@@ -1,18 +1,19 @@
-import { Model, Field } from "./model";
+import { IModel, IField } from "./model";
 
 const fieldsMap = {
-    integer: "IntegerField()"
+    integer: "IntegerField()",
+    string: "TextField()"
 }
 
-export const convertToDjangoFields = (fields: [Field]) => {
-    // fields.map(field => ``)
-    "";
-}
+export const parseFields = (fields: [IField]) =>
+    fields.map(field =>
+        `    ${field.name} = models.${fieldsMap[field.type]}`)
+        .join('\n');
 
-export const generateModel = (model: Model) => {
+export const generateModel = (model: IModel) => {
     return `
 class ${model.name}(models.Model):
-    ${model.fields[0].name} = models.${fieldsMap[model.fields[0].type]}
+${parseFields(model.fields)}
 
     def __str__(self):
         return self.${model.fields[0].name}
