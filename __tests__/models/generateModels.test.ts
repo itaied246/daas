@@ -27,7 +27,7 @@ describe("generate models", () => {
         const actual = generateModels([tire]);
 
         const expected =
-            `# -*- coding: utf-8 -*-
+`# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from django.db import models
@@ -42,7 +42,7 @@ class Tire(models.Model):
         const actual = generateModels([tire, spec]);
 
         const expected =
-            `# -*- coding: utf-8 -*-
+`# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from django.db import models
