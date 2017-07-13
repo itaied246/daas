@@ -2,7 +2,7 @@ import { IModel } from "./interfaces";
 import { Model, Imports } from '.';
 
 const parseModels = (models: [IModel]) => 
-    models.map(Model).join('\n');
+    models.map(Model).join('\n\n');
 
 const generateModels = (models: [IModel]) => 
 `${Imports}
