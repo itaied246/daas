@@ -5,12 +5,10 @@ import generateModels from "../models/generateModels";
 const filename = "models.py";
 const path = "./models";
 
-const generateModelsFile = async (models: [IModel]) => {
+export const generateModelsFile = async (models: [IModel]) => {
     try {
         await generateFile(path, filename, generateModels(models))
     } catch (e) {
         console.error(`Failed generating models file ${path}/${filename} `, e)
     }
 }
-
-export default generateModelsFile;
