@@ -3,7 +3,7 @@ import { IModel } from "../../../src/models/interfaces";
 
 describe("parse django-graphene type", () => {
 
-    test("", () => {
+    test("single field", () => {
 
         const actual: IModel = {
             name: "Tire",

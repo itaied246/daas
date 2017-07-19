@@ -1,8 +1,8 @@
-import { Model } from '../../src/models';
+import { parseModel } from '../../src/models';
 import { IModel } from "../../src/models/interfaces";
 
 const assertModel =
-    (actual: IModel, expected: string) => expect(Model(actual)).toBe(expected)
+    (actual: IModel, expected: string) => expect(parseModel(actual)).toBe(expected)
 
 describe("parse django model", () => {
 

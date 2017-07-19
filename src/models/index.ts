@@ -1,11 +1,11 @@
-import Field from './field';
+import { parseField } from './parseField';
 import Imports from './imports';
-import Model from './model';
+import { parseModel } from './parseModel';
 import generateModels from './generateModels';
 
 export {
-    Field,
+    parseField,
     Imports,
-    Model,
+    parseModel,
     generateModels,
 }

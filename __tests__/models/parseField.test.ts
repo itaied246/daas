@@ -1,8 +1,8 @@
-import { Field } from '../../src/models';
+import { parseField } from '../../src/models';
 import { IField } from "../../src/models/interfaces";
 
 const assertField = 
-    (actual :IField, expected :string) => expect(Field(actual)).toBe(expected);
+    (actual :IField, expected :string) => expect(parseField(actual)).toBe(expected);
 
 describe("parse django field", () => {
 
