@@ -11,7 +11,6 @@ const generateModelsFile = async (models: [IModel]) => {
     } catch (e) {
         console.error(`Failed generating models file ${path}/${filename} `, e)
     }
-
 }
 
 export default generateModelsFile;
