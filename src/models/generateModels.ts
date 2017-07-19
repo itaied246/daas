@@ -1,11 +1,12 @@
 import { IModel } from "./interfaces";
-import { parseModel, Imports } from '.';
+import { parseModel, imports } from '.';
 
 const parseModels = (models: [IModel]) => 
     models.map(parseModel).join('\n\n');
 
 const generateModels = (models: [IModel]) => 
-`${Imports}
+`${imports}
+
 ${parseModels(models)}`
 
 export default generateModels;
