@@ -1,12 +1,12 @@
-import { IModel } from "./interfaces";
-import { parseModel, imports } from '.';
+import {imports, parseModel} from ".";
+import {IModel} from "./interfaces";
 
-const parseModels = (models: [IModel]) => 
-    models.map(parseModel).join('\n\n');
+const parseModels = (models: [IModel]) =>
+    models.map(parseModel).join("\n\n");
 
-const generateModels = (models: [IModel]) => 
-`${imports}
+const generateModels = (models: [IModel]) =>
+    `${imports}
 
-${parseModels(models)}`
+${parseModels(models)}`;
 
 export default generateModels;

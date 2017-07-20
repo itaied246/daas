@@ -1,9 +1,11 @@
-import { generateModelsFile } from './generateModelsFile';
+import { generateFile } from "./generateFile";
+import { generateModelsFile } from "./generateModelsFile";
 import { generateTypesFile } from "./generateTypesFile";
-import { generateFile } from './generateFile';
+import { readModels } from "./readModels";
 
 export {
     generateModelsFile,
     generateTypesFile,
-    generateFile
-}
+    generateFile,
+    readModels,
+};
