@@ -4,5 +4,5 @@ import {promisify} from "util";
 const readFile = promisify(fs.readFile);
 
 export const readModels =
-    (path: string, filename: string) =>
-        readFile(`${path}/${filename}`);
+    async (path: string, filename: string) =>
+        JSON.parse(await readFile(`${path}/${filename}`));
