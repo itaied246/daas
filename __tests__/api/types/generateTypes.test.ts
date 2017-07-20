@@ -36,7 +36,7 @@ import data.models
 
 class TireType(DjangoObjectType):
     class Meta:
-        model = Tire
+        model = data.models.Tire
         interfaces = (relay.Node,)`;
 
         expect(actual).toBe(expected);
@@ -55,12 +55,12 @@ import data.models
 
 class TireType(DjangoObjectType):
     class Meta:
-        model = Tire
+        model = data.models.Tire
         interfaces = (relay.Node,)
 
 class SpecType(DjangoObjectType):
     class Meta:
-        model = Spec
+        model = data.models.Spec
         interfaces = (relay.Node,)`;
 
         expect(actual).toBe(expected);

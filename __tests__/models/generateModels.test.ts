@@ -28,8 +28,8 @@ describe("generate models", () => {
 
         const expected =
 `# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 
+from __future__ import unicode_literals
 from django.db import models
 
 class Tire(models.Model):
@@ -43,8 +43,8 @@ class Tire(models.Model):
 
         const expected =
 `# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 
+from __future__ import unicode_literals
 from django.db import models
 
 class Tire(models.Model):

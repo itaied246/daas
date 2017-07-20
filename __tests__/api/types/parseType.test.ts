@@ -18,7 +18,7 @@ describe("parse django-graphene type", () => {
         const expected =
             `class TireType(DjangoObjectType):
     class Meta:
-        model = Tire
+        model = data.models.Tire
         interfaces = (relay.Node,)`;
 
         expect(parseType(actual)).toBe(expected);
