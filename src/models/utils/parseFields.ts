@@ -1,7 +1,7 @@
 import { IField } from "../interfaces/index";
-import Field from '../field';
+import { parseField } from "../parseField";
 
 export const parseFields = (fields: [IField]) =>
-    fields.map(field => Field(field))
-        .map(field => `    ${field}`)
-        .join('\n');
+    fields.map(parseField)
+        .map((field) => `    ${field}`)
+        .join("\n");

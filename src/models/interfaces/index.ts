@@ -1,6 +1,6 @@
 export interface IModel {
     name: string;
-    fields: [IField]
+    fields: [IField];
 }
 
 export interface IField {

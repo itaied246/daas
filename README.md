@@ -15,6 +15,10 @@ so we can do it by calling remote services.
 
 Design your data -> generate `django-graphene` project -> expose your API.
 
+# Requirements
+
+- `Node` v8.1.4
+
 # Architecture
 
 ![architecture](docs/architecture.png)
