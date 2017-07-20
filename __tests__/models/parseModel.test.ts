@@ -1,5 +1,6 @@
 import { parseModel } from "../../src/models";
 import { IModel } from "../../src/models/interfaces";
+import {tire} from "../utils/models";
 
 const assertModel =
     (actual: IModel, expected: string) => expect(parseModel(actual)).toBe(expected);
@@ -7,26 +8,16 @@ const assertModel =
 describe("parse django model", () => {
 
     test("single field", () => {
-        const actual: IModel = {
-            name: "Tire",
-            fields: [
-                {
-                    name: "f",
-                    type: "IntegerField()",
-                },
-            ],
-        };
 
         const expected =
 `class Tire(models.Model):
     f = models.IntegerField()`;
 
-        assertModel(actual, expected);
+        assertModel(tire, expected);
     });
 
     test("multiple fields", () => {
         const actual: IModel = {
-            name: "Tire",
             fields: [
                 {
                     name: "f1",
@@ -37,6 +28,7 @@ describe("parse django model", () => {
                     type: "TextField()",
                 },
             ],
+            name: "Tire",
         };
 
         const expected =

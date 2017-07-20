@@ -10,6 +10,6 @@ export const generateModelsFile = async (models: [IModel]) => {
     try {
         await generateFile(path, filename, generateModels(models));
     } catch (e) {
-        logger.error(`Failed generating models file ${path}/${filename} `, e);
+        logger.error(`Failed generating file ${path}/${filename} `, e);
     }
 };

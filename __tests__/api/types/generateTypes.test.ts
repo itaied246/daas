@@ -1,27 +1,7 @@
 import { generateTypes } from "../../../src/api/types";
-import { IModel } from "../../../src/models/interfaces";
+import {spec, tire} from "../../utils/models";
 
 describe("generate types", () => {
-
-    const tire: IModel = {
-        name: "Tire",
-        fields: [
-            {
-                name: "width",
-                type: "IntegerField()",
-            },
-        ],
-    };
-
-    const spec: IModel = {
-        name: "Spec",
-        fields: [
-            {
-                name: "manufacturer",
-                type: "TextField()",
-            },
-        ],
-    };
 
     test("single type", () => {
 
@@ -36,7 +16,7 @@ import data.models
 
 class TireType(DjangoObjectType):
     class Meta:
-        model = Tire
+        model = data.models.Tire
         interfaces = (relay.Node,)`;
 
         expect(actual).toBe(expected);
@@ -55,12 +35,12 @@ import data.models
 
 class TireType(DjangoObjectType):
     class Meta:
-        model = Tire
+        model = data.models.Tire
         interfaces = (relay.Node,)
 
 class SpecType(DjangoObjectType):
     class Meta:
-        model = Spec
+        model = data.models.Spec
         interfaces = (relay.Node,)`;
 
         expect(actual).toBe(expected);
