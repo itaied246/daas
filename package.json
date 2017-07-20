@@ -13,7 +13,7 @@
     "build:dev": "yarn build -- -w",
     "test": "jest --coverage && codecov",
     "test:dev": "jest --watchAll",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+    "lint": "tslint -c tslint.json src/**/*.ts __test__/**/*.ts"
   },
   "devDependencies": {
     "@types/jest": "^20.0.2",
@@ -37,5 +37,8 @@
       "json",
       "jsx"
     ]
+  },
+  "dependencies": {
+    "winston": "^2.3.1"
   }
 }

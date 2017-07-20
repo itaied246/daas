@@ -1,5 +1,5 @@
-import { IModel } from "../../../src/models/interfaces";
 import { generateTypes } from "../../../src/api/types";
+import { IModel } from "../../../src/models/interfaces";
 
 describe("generate types", () => {
 
@@ -8,20 +8,20 @@ describe("generate types", () => {
         fields: [
             {
                 name: "width",
-                type: "IntegerField()"
-            }
-        ]
-    }
+                type: "IntegerField()",
+            },
+        ],
+    };
 
     const spec: IModel = {
         name: "Spec",
         fields: [
             {
                 name: "manufacturer",
-                type: "TextField()"
-            }
-        ]
-    }
+                type: "TextField()",
+            },
+        ],
+    };
 
     test("single type", () => {
 
@@ -40,9 +40,9 @@ class TireType(DjangoObjectType):
         interfaces = (relay.Node,)`;
 
         expect(actual).toBe(expected);
-    })
+    });
 
-        test("multiple types", () => {
+    test("multiple types", () => {
 
         const actual = generateTypes([tire, spec]);
 
@@ -64,6 +64,6 @@ class SpecType(DjangoObjectType):
         interfaces = (relay.Node,)`;
 
         expect(actual).toBe(expected);
-    })
+    });
 
-})
+});

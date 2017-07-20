@@ -1,5 +1,5 @@
+import { generateModels } from "../../src/models";
 import { IModel } from "../../src/models/interfaces";
-import { generateModels } from '../../src/models'
 
 describe("generate models", () => {
 
@@ -8,20 +8,20 @@ describe("generate models", () => {
         fields: [
             {
                 name: "width",
-                type: "IntegerField()"
-            }
-        ]
-    }
+                type: "IntegerField()",
+            },
+        ],
+    };
 
     const spec: IModel = {
         name: "Spec",
         fields: [
             {
                 name: "manufacturer",
-                type: "TextField()"
-            }
-        ]
-    }
+                type: "TextField()",
+            },
+        ],
+    };
 
     test("single model", () => {
         const actual = generateModels([tire]);
@@ -33,10 +33,10 @@ from __future__ import unicode_literals
 from django.db import models
 
 class Tire(models.Model):
-    width = models.IntegerField()`
+    width = models.IntegerField()`;
 
         expect(actual).toBe(expected);
-    })
+    });
 
     test("multiple models", () => {
         const actual = generateModels([tire, spec]);
@@ -51,10 +51,9 @@ class Tire(models.Model):
     width = models.IntegerField()
 
 class Spec(models.Model):
-    manufacturer = models.TextField()`
+    manufacturer = models.TextField()`;
 
         expect(actual).toBe(expected);
-    })
+    });
 
-})
-
+});

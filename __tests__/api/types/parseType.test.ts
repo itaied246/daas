@@ -10,19 +10,19 @@ describe("parse django-graphene type", () => {
             fields: [
                 {
                     name: "f",
-                    type: "IntegerField()"
-                }
-            ]
-        }
+                    type: "IntegerField()",
+                },
+            ],
+        };
 
         const expected =
             `class TireType(DjangoObjectType):
     class Meta:
         model = Tire
-        interfaces = (relay.Node,)`
+        interfaces = (relay.Node,)`;
 
         expect(parseType(actual)).toBe(expected);
 
-    })
+    });
 
-})
+});

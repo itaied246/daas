@@ -1,11 +1,11 @@
-import { parseField } from './parseField';
-import { imports } from './imports';
-import { parseModel } from './parseModel';
-import generateModels from './generateModels';
+import generateModels from "./generateModels";
+import { imports } from "./imports";
+import { parseField } from "./parseField";
+import { parseModel } from "./parseModel";
 
 export {
     parseField,
     imports,
     parseModel,
     generateModels,
-}
+};

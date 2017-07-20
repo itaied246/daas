@@ -1,5 +1,5 @@
-import { parseFields } from './parseFields';
+import { parseFields } from "./parseFields";
 
 export {
-    parseFields
-}
+    parseFields,
+};

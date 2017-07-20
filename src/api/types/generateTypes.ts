@@ -1,9 +1,9 @@
 import { IModel } from "../../models/interfaces";
+import { imports } from "./imports";
 import { parseType } from "./parseType";
-import { imports } from './imports';
 
 const parseTypes = (models: [IModel]) =>
-    models.map(parseType).join('\n\n');
+    models.map(parseType).join("\n\n");
 
 export const generateTypes = (models: [IModel]) =>
     `${imports}

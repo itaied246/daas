@@ -5,6 +5,9 @@
   ],
   "jsRules": {},
   "rules": {
+    "whitespace": [
+      "check-module"
+    ]
   },
   "rulesDirectory": []
 }
