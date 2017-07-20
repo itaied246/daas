@@ -1,19 +1,11 @@
 import { parseType } from "../../../src/api/types";
-import { IModel } from "../../../src/models/interfaces";
+import {tire} from "../../utils/models";
 
 describe("parse django-graphene type", () => {
 
     test("single field", () => {
 
-        const actual: IModel = {
-            name: "Tire",
-            fields: [
-                {
-                    name: "f",
-                    type: "IntegerField()",
-                },
-            ],
-        };
+        const actual = parseType(tire);
 
         const expected =
             `class TireType(DjangoObjectType):
@@ -21,7 +13,7 @@ describe("parse django-graphene type", () => {
         model = data.models.Tire
         interfaces = (relay.Node,)`;
 
-        expect(parseType(actual)).toBe(expected);
+        expect(actual).toBe(expected);
 
     });
 

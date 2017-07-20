@@ -1,27 +1,7 @@
 import {parseQuery} from "../../../src/api/query/parseQuery";
-import {IModel} from "../../../src/models/interfaces/index";
+import {spec, tire} from "../../utils/models";
 
 describe("parse django-graphene query", () => {
-
-    const tire: IModel = {
-        name: "Tire",
-        fields: [
-            {
-                name: "f",
-                type: "IntegerField()",
-            },
-        ],
-    };
-
-    const spec: IModel = {
-        name: "Spec",
-        fields: [
-            {
-                name: "manufacturer",
-                type: "TextField()",
-            },
-        ],
-    };
 
     test("parse single query type", () => {
         const expected =

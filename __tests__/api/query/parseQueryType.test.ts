@@ -1,17 +1,7 @@
 import {parseQueryType} from "../../../src/api/query/parseQueryType";
-import {IModel} from "../../../src/models/interfaces/index";
+import {tire} from "../../utils/models";
 
 describe("parse query type", () => {
-
-    const tire: IModel = {
-        name: "Tire",
-        fields: [
-            {
-                name: "f",
-                type: "IntegerField()",
-            },
-        ],
-    };
 
     test("simple query type", () => {
 
