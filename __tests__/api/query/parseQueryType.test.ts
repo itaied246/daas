@@ -8,8 +8,8 @@ describe("parse query type", () => {
         const actual = parseQueryType(tire);
 
         const expected =
-            `    Tire = relay.Node.Field(TireType)
-    all_tires = DjangoFilterConnectionField(TireType)`;
+            `    Tire = relay.Node.Field(data.api.types.TireType)
+    all_tires = DjangoFilterConnectionField(data.api.types.TireType)`;
 
         expect(actual).toBe(expected);
 

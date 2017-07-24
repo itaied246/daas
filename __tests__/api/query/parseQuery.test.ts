@@ -6,8 +6,8 @@ describe("parse django-graphene query", () => {
     test("parse single query type", () => {
         const expected =
             `class Query(AbstractType):
-    Tire = relay.Node.Field(TireType)
-    all_tires = DjangoFilterConnectionField(TireType)`;
+    Tire = relay.Node.Field(data.api.types.TireType)
+    all_tires = DjangoFilterConnectionField(data.api.types.TireType)`;
 
         const actual = parseQuery([tire]);
 
@@ -17,11 +17,11 @@ describe("parse django-graphene query", () => {
     test("parse multiple query types", () => {
         const expected =
             `class Query(AbstractType):
-    Tire = relay.Node.Field(TireType)
-    all_tires = DjangoFilterConnectionField(TireType)
+    Tire = relay.Node.Field(data.api.types.TireType)
+    all_tires = DjangoFilterConnectionField(data.api.types.TireType)
 
-    Spec = relay.Node.Field(SpecType)
-    all_specs = DjangoFilterConnectionField(SpecType)`;
+    Spec = relay.Node.Field(data.api.types.SpecType)
+    all_specs = DjangoFilterConnectionField(data.api.types.SpecType)`;
 
         const actual = parseQuery([tire, spec]);
 

@@ -1,3 +1,3 @@
 export const config = {
-    root: "C:/Users/ATI/Development/generated",
+    root: "C:/Users/ATI/Development/generated/data",
 };

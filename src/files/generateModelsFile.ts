@@ -4,7 +4,7 @@ import {IModel} from "../models/interfaces";
 import {logger} from "../utils";
 
 const filename = "models.py";
-const path = "models";
+const path = ".";
 
 export const generateModelsFile = async (models: [IModel]) => {
     try {
