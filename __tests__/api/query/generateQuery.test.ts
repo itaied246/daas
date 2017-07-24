@@ -9,7 +9,6 @@ describe("generate django-graphene query", () => {
 
 from graphene import relay, AbstractType
 from graphene_django.filter import DjangoFilterConnectionField
-import data.types
 
 class Query(AbstractType):
     Tire = relay.Node.Field(TireType)
@@ -26,7 +25,6 @@ class Query(AbstractType):
 
 from graphene import relay, AbstractType
 from graphene_django.filter import DjangoFilterConnectionField
-import data.types
 
 class Query(AbstractType):
     Tire = relay.Node.Field(TireType)
