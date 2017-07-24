@@ -3,4 +3,4 @@ export const imports =
 
 from graphene import relay, AbstractType
 from graphene_django.filter import DjangoFilterConnectionField
-import data.types`;
+import data.api.types`;

@@ -3,8 +3,8 @@ import {generateQuery} from "../api/query/generateQuery";
 import {IModel} from "../models/interfaces";
 import {logger} from "../utils";
 
-const filename = "types.py";
-const path = "../generated/api";
+const filename = "query.py";
+const path = "api";
 
 export const generateQueryFile = async (models: [IModel]) => {
     try {

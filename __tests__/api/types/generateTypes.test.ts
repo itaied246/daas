@@ -10,14 +10,16 @@ describe("generate types", () => {
         const expected =
             `# -*- coding: utf-8 -*-
 
-from graphene import relay, AbstractType
+from graphene import relay
 from graphene_django import DjangoObjectType
 import data.models
+
 
 class TireType(DjangoObjectType):
     class Meta:
         model = data.models.Tire
-        interfaces = (relay.Node,)`;
+        interfaces = (relay.Node,)
+`;
 
         expect(actual).toBe(expected);
     });
@@ -29,19 +31,22 @@ class TireType(DjangoObjectType):
         const expected =
             `# -*- coding: utf-8 -*-
 
-from graphene import relay, AbstractType
+from graphene import relay
 from graphene_django import DjangoObjectType
 import data.models
+
 
 class TireType(DjangoObjectType):
     class Meta:
         model = data.models.Tire
         interfaces = (relay.Node,)
 
+
 class SpecType(DjangoObjectType):
     class Meta:
         model = data.models.Spec
-        interfaces = (relay.Node,)`;
+        interfaces = (relay.Node,)
+`;
 
         expect(actual).toBe(expected);
     });
