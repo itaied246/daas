@@ -4,7 +4,7 @@ import {IModel} from "../models/interfaces";
 import {logger} from "../utils";
 
 const filename = "types.py";
-const path = "../generated/api";
+const path = "api";
 
 export const generateTypesFile = async (models: [IModel]) => {
     try {
