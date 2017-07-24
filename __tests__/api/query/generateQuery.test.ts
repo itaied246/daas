@@ -11,9 +11,11 @@ from graphene import relay, AbstractType
 from graphene_django.filter import DjangoFilterConnectionField
 import data.api.types
 
+
 class Query(AbstractType):
     Tire = relay.Node.Field(data.api.types.TireType)
-    all_tires = DjangoFilterConnectionField(data.api.types.TireType)`;
+    all_tires = DjangoFilterConnectionField(data.api.types.TireType)
+`;
 
         const actual = generateQuery([tire]);
 
@@ -28,12 +30,14 @@ from graphene import relay, AbstractType
 from graphene_django.filter import DjangoFilterConnectionField
 import data.api.types
 
+
 class Query(AbstractType):
     Tire = relay.Node.Field(data.api.types.TireType)
     all_tires = DjangoFilterConnectionField(data.api.types.TireType)
 
     Spec = relay.Node.Field(data.api.types.SpecType)
-    all_specs = DjangoFilterConnectionField(data.api.types.SpecType)`;
+    all_specs = DjangoFilterConnectionField(data.api.types.SpecType)
+`;
 
         const actual = generateQuery([tire, spec]);
 

@@ -32,8 +32,10 @@ describe("generate models", () => {
 from __future__ import unicode_literals
 from django.db import models
 
+
 class Tire(models.Model):
-    width = models.IntegerField()`;
+    width = models.IntegerField()
+`;
 
         expect(actual).toBe(expected);
     });
@@ -47,11 +49,14 @@ class Tire(models.Model):
 from __future__ import unicode_literals
 from django.db import models
 
+
 class Tire(models.Model):
     width = models.IntegerField()
 
+
 class Spec(models.Model):
-    manufacturer = models.TextField()`;
+    manufacturer = models.TextField()
+`;
 
         expect(actual).toBe(expected);
     });

@@ -14,10 +14,12 @@ from graphene import relay
 from graphene_django import DjangoObjectType
 import data.models
 
+
 class TireType(DjangoObjectType):
     class Meta:
         model = data.models.Tire
-        interfaces = (relay.Node,)`;
+        interfaces = (relay.Node,)
+`;
 
         expect(actual).toBe(expected);
     });
@@ -33,15 +35,18 @@ from graphene import relay
 from graphene_django import DjangoObjectType
 import data.models
 
+
 class TireType(DjangoObjectType):
     class Meta:
         model = data.models.Tire
         interfaces = (relay.Node,)
 
+
 class SpecType(DjangoObjectType):
     class Meta:
         model = data.models.Spec
-        interfaces = (relay.Node,)`;
+        interfaces = (relay.Node,)
+`;
 
         expect(actual).toBe(expected);
     });

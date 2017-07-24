@@ -5,4 +5,6 @@ import {parseQuery} from "./parseQuery";
 export const generateQuery = (models: [IModel]) =>
     `${imports}
 
-${parseQuery(models)}`;
+
+${parseQuery(models)}
+`;
