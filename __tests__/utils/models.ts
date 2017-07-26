@@ -19,3 +19,14 @@ export const spec: IModel = {
     ],
     name: "Spec",
 };
+
+export const car: IModel = {
+    fields: [
+        {
+            name: "seats",
+            type: "IntegerField()",
+        },
+    ],
+    name: "Car",
+    description: "Car model description.",
+};
