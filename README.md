@@ -39,6 +39,7 @@ The base JSON is parsed to the web service.
         {
             "name": <field name>,
             "type": <raw django field type>
+            "description": <model description>
         }
     ]
 }
@@ -52,7 +53,8 @@ Example:
     "fields": [
         {
             "name": "width",
-            "type": "IntegerField(default=5, null=True)"
+            "type": "IntegerField(default=5, null=True, help_text=\"The tire's width in inches.\")"
+            "description": "A car's tire model."
         }
     ]
 }
