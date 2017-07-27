@@ -1,6 +1,7 @@
 export interface IModel {
     name: string;
     fields: IField[];
+    inputs: IField[];
     description?: string;
 }
 
