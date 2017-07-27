@@ -1,8 +1,8 @@
 import {IField} from "../../../src/models/interfaces/index";
 import {modelTypeConverter} from "../../../src/api/mutation/modelTypeConverter";
 
-const assertConversion = (field: IField, expected: string) =>
-    expect(modelTypeConverter([field])).toBe(expected);
+const assertConversion = (field: IField[], expected: string[]) =>
+    expect(modelTypeConverter(field)).toBe(expected);
 
 describe("convert fields without options", () => {
 
@@ -15,7 +15,7 @@ describe("convert fields without options", () => {
 
         const expected = `f = graphene.String(required=True)`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -28,7 +28,7 @@ describe("convert fields without options", () => {
 
         const expected = `f = graphene.String(required=True)`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -41,7 +41,7 @@ describe("convert fields without options", () => {
 
         const expected = `f = graphene.Int(required=True)`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -54,7 +54,7 @@ describe("convert fields without options", () => {
 
         const expected = `f = graphene.Float(required=True)`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -67,7 +67,7 @@ describe("convert fields without options", () => {
 
         const expected = `f = graphene.Boolean(required=True)`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -80,7 +80,7 @@ describe("convert fields without options", () => {
 
         const expected = `f = graphene.types.datetime.DateTime(required=True)`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -93,7 +93,7 @@ describe("convert fields without options", () => {
 
         const expected = `TODO`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -110,7 +110,7 @@ describe("convert fields with options", () => {
 
         const expected = `f = graphene.String(required=False)`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -123,7 +123,7 @@ describe("convert fields with options", () => {
 
         const expected = `f = graphene.String(default_value="def")`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 
@@ -136,7 +136,7 @@ describe("convert fields with options", () => {
 
         const expected = `f = graphene.String()`;
 
-        assertConversion(field, expected);
+        assertConversion([field], [expected]);
 
     });
 

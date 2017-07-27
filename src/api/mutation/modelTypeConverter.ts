@@ -9,12 +9,15 @@ const conversionMap = {
     DateTime: "graphene.types.datetime.DateTime",
 };
 
-const convert = (type: string) => conversionMap[type] || type;
+const convert = (type: string) => conversionMap[type];
 
-const convertField = (type: string) =>
-    convert(type.split("(", 1)[0]);
+const extractFieldType = (field: IField) =>
+    field.type.split("(", 1)[0];
 
-export const modelTypeConverter = (fields: [IField]) =>
+const convertField = (field: IField) =>
+    `${field.name} = ${convert(extractFieldType(field))}`;
+
+export const modelTypeConverter = (fields: IField[]) =>
     fields
-        .map((field) => field.type)
-        .map(convertField);
+        .map(convertField)
+        ;

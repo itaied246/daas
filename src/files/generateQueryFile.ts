@@ -6,7 +6,7 @@ import {logger} from "../utils";
 const filename = "query.py";
 const path = "api";
 
-export const generateQueryFile = async (models: [IModel]) => {
+export const generateQueryFile = async (models: IModel[]) => {
     try {
         await generateFile(path, filename, generateQuery(models));
     } catch (e) {

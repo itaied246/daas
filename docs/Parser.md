@@ -27,3 +27,9 @@ null (default: False) -> required (default: True)
 default               -> default_value
 ```
 
+Not yet designed:
+
+```
+unique -> ?required?
+```
+

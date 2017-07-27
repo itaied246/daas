@@ -6,7 +6,7 @@ import {logger} from "../utils";
 const filename = "types.py";
 const path = "api";
 
-export const generateTypesFile = async (models: [IModel]) => {
+export const generateTypesFile = async (models: IModel[]) => {
     try {
         await generateFile(path, filename, generateTypes(models));
     } catch (e) {
