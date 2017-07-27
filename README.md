@@ -37,14 +37,10 @@ The base JSON is parsed to the web service.
     "name": <model name>,
     "fields": [
         {
-            "name": <field name>,
-            "type": <raw django field type>
-        }
-    ],
-    "inputs": [
-        {
-            "name": <field name>,
-            "type": <raw graphene input field type>
+            "fieldName": <field name>,
+            "fieldType": <raw django field type>,
+            "inputName": <field name>,
+            "inputType": <raw graphene input field type>
         }
     ],
     "description": <model description>
@@ -58,16 +54,12 @@ Example:
     "name": "Tire",
     "fields": [
         {
-            "name": "width",
-            "type": "IntegerField(default=5, null=True, help_text=\"The tire's width in inches.\")"
+            "fieldName": "width",
+            "fieldType": "IntegerField(default=5, null=True, help_text=\"The tire's width in inches.\")",
+            "inputName": "width",
+            "inputType": "Int(default_value=5, required=False)"
         }
     ],
-    "inputs": [
-        {
-            "name": "width",
-            "type": "Int(default_value=5, required=False)"
-        }
-        ],
     "description": "A car's tire model."
 }
 ```

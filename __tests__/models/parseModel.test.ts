@@ -20,12 +20,16 @@ describe("parse django model", () => {
         const actual: IModel = {
             fields: [
                 {
-                    name: "f1",
-                    type: "IntegerField()",
+                    field: {
+                        name: "f1",
+                        type: "IntegerField()",
+                    },
                 },
                 {
-                    name: "f2",
-                    type: "TextField()",
+                    field: {
+                        name: "f2",
+                        type: "TextField()",
+                    },
                 },
             ],
             name: "Tire",

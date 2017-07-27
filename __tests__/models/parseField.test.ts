@@ -1,5 +1,5 @@
-import { parseField } from "../../src/models";
-import { IField } from "../../src/models/interfaces";
+import {parseField} from "../../src/models";
+import {IField} from "../../src/models/interfaces";
 
 const assertField =
     (actual: IField, expected: string) => expect(parseField(actual)).toBe(expected);
@@ -8,8 +8,10 @@ describe("parse django field", () => {
 
     test("raw field", () => {
         const actual: IField = {
-            name: "a",
-            type: "TextField()",
+            field: {
+                name: "a",
+                type: "TextField()",
+            },
         };
 
         const expected = "a = models.TextField()";
@@ -19,8 +21,10 @@ describe("parse django field", () => {
 
     test("field with options", () => {
         const actual: IField = {
-            name: "a",
-            type: "TextField(default=5, null=True)",
+            field: {
+                name: "a",
+                type: "TextField(default=5, null=True)",
+            },
         };
 
         const expected = "a = models.TextField(default=5, null=True)";
