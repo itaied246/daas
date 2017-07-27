@@ -41,7 +41,7 @@ The base JSON is parsed to the web service.
             "type": <raw django field type>
         }
     ],
-    "input": [
+    "inputs": [
         {
             "name": <field name>,
             "type": <raw graphene input field type>
@@ -62,7 +62,7 @@ Example:
             "type": "IntegerField(default=5, null=True, help_text=\"The tire's width in inches.\")"
         }
     ],
-    "input": [
+    "inputs": [
         {
             "name": "width",
             "type": "Int(default_value=5, required=False)"

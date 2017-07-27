@@ -1,28 +1,28 @@
 import {generateCreate} from "../../../../src/api/mutation/create/generateCreate";
-import {spec} from "../../../utils/models";
+import {car} from "../../../utils/models";
 
-describe.skip("generate create mutation", () => {
+describe("generate create mutation", () => {
 
-    test("TBD", () => {
+    test("single input", () => {
 
         const expected =
-            `class CreateSpec(relay.ClientIDMutation):
-    spec = Field(SpecType)
+            `class CreateCar(graphene.relay.ClientIDMutation):
+    car = graphene.Field(data.api.types.CarType)
 
     class Input:
-        manufacturer = String()
+        seats = graphene.Int(required=True)
 
     @classmethod
     def mutate_and_get_payload(cls, args, c, i):
-        spec = Spec(
-            manufacturer=args.get('manufacturer'),
+        car = data.models.Car(
+            seats=args.get('seats')
         )
-        spec.save()
-        return CreateSpec(spec=spec)`;
+        car.save()
+        return CreateCar(car=car)`;
 
-        const actual = generateCreate(spec);
+        const actual = generateCreate(car);
 
-        expect(actual).toBe(expected);
+        expect(actual).toEqual(expected);
 
     });
 

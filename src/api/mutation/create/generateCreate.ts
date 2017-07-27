@@ -1,11 +1,12 @@
 import {IModel} from "../../../models/interfaces/index";
+import {parseInputs} from "./parseInputs";
 
 export const generateCreate = (model: IModel) =>
     `class Create${model.name}(graphene.relay.ClientIDMutation):
-    ${model.name} = graphene.Field(data.api.types.${model.name}Type)
+    ${model.name.toLowerCase()} = graphene.Field(data.api.types.${model.name}Type)
 
     class Input:
-        `;
+${parseInputs(model.inputs)}`;
 
 // `class CreateSpec(relay.ClientIDMutation):
 //     spec = Field(SpecType)
