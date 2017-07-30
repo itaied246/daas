@@ -6,7 +6,7 @@ const convert = (field: IField) =>
 const parseInputArgs = (body: IField[]) =>
     body
         .map(convert)
-        .join("\n");
+        .join(",\n");
 
 export const parseModelMutation = (model: IModel) => {
     const instance = model.name.toLowerCase();

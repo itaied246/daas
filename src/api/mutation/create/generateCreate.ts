@@ -15,4 +15,5 @@ ${parseInputs(model.body)}
 
     @classmethod
     def mutate_and_get_payload(cls, args, c, i):
-${parseModelMutation(model)}`;
+${parseModelMutation(model)}
+`;

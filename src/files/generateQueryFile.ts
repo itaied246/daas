@@ -4,7 +4,7 @@ import {IModel} from "../models/interfaces";
 import {logger} from "../utils";
 
 const filename = "query.py";
-const path = "api";
+const path = "api/query";
 
 export const generateQueryFile = async (models: IModel[]) => {
     try {

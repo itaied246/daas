@@ -25,7 +25,8 @@ class CreateCar(graphene.relay.ClientIDMutation):
             seats=args.get('seats')
         )
         car.save()
-        return CreateCar(car=car)`;
+        return CreateCar(car=car)
+`;
 
         const actual = generateCreate(car);
 

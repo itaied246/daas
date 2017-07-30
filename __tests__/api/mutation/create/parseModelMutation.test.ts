@@ -65,7 +65,7 @@ describe("parseModelMutation", () => {
 
         const expected =
             `        spec = data.models.Spec(
-            volume=args.get('volume')
+            volume=args.get('volume'),
             seats=args.get('seats')
         )
         spec.save()
