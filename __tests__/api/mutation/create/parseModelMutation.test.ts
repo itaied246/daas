@@ -20,12 +20,10 @@ describe("parseModelMutation", () => {
                         name: "volume",
                         type: "_",
                     },
-                    input:
-                        {
-                            name: "volume",
-                            type: "_",
-                        },
-
+                    input: {
+                        name: "volume",
+                        type: "_",
+                    },
                 },
             ],
         };
@@ -51,12 +49,10 @@ describe("parseModelMutation", () => {
                         name: "volume",
                         type: "_",
                     },
-                    input:
-                        {
-                            name: "VOLUME",
-                            type: "_",
-                        },
-
+                    input: {
+                        name: "VOLUME",
+                        type: "_",
+                    },
                 },
             ],
         };

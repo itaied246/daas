@@ -6,7 +6,14 @@ describe("generate create mutation", () => {
     test("single input", () => {
 
         const expected =
-            `class CreateCar(graphene.relay.ClientIDMutation):
+            `# -*- coding: utf-8 -*-
+
+import graphene
+import data.api.types
+import data.models
+
+
+class CreateCar(graphene.relay.ClientIDMutation):
     car = graphene.Field(data.api.types.CarType)
 
     class Input:
