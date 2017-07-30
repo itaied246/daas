@@ -10,7 +10,7 @@ describe("parseInputs", () => {
 
         const actual: IField = {
             field: {
-                name: "volume",
+                name: "_",
                 type: "_",
             },
             input: {
@@ -32,7 +32,7 @@ describe("parseInputs", () => {
         const actual: IField[] = [
             {
                 field: {
-                    name: "volume",
+                    name: "_",
                     type: "_",
                 },
                 input: {
@@ -42,7 +42,7 @@ describe("parseInputs", () => {
             },
             {
                 field: {
-                    name: "seats",
+                    name: "_",
                     type: "_",
                 },
                 input: {
