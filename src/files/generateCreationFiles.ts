@@ -3,16 +3,13 @@ import {generateFile} from "./generateFile";
 import {generateCreate} from "../api/mutation/create/generateCreate";
 import {logger} from "../utils/logger";
 
-const path = "api/mutation/create";
+const path = "api/mutation";
+const filename = `create.py`;
 
-const generateCreationFile = async (model: IModel) => {
-    const filename = `${model.name}.py`;
+export const generateCreationFiles = async (models: IModel[]) => {
     try {
-        await generateFile(path, filename, generateCreate(model));
+        await generateFile(path, filename, generateCreate(models));
     } catch (e) {
         logger.error(`Failed generating file ${path}/${filename} `, e);
     }
-}
-
-export const generateCreationFiles = async (models: IModel[]) =>
-    await models.forEach(generateCreationFile);
+};

@@ -20,6 +20,10 @@ export const spec: IModel = {
                 name: "manufacturer",
                 type: "TextField()",
             },
+            input: {
+                name: "manufacturer",
+                type: "String(required=True)",
+            },
         },
     ],
 };
