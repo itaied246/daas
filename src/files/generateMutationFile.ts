@@ -1,14 +1,14 @@
 import {generateFile} from ".";
-import {generateQuery} from "../api/query/generateQuery";
 import {IModel} from "../models/interfaces";
 import {logger} from "../utils";
+import {generateMutation} from "../api/mutation/generateMutation";
 
-const filename = "query.py";
+const filename = "mutation.py";
 const path = "api";
 
-export const generateQueryFile = async (models: IModel[]) => {
+export const generateMutationFile = async (models: IModel[]) => {
     try {
-        await generateFile(path, filename, generateQuery(models));
+        await generateFile(path, filename, generateMutation(models));
     } catch (e) {
         logger.error(`Failed generating file ${path}/${filename} `, e);
     }

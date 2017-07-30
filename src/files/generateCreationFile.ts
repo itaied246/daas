@@ -6,7 +6,7 @@ import {logger} from "../utils/logger";
 const path = "api/mutation";
 const filename = `create.py`;
 
-export const generateCreationFiles = async (models: IModel[]) => {
+export const generateCreationFile = async (models: IModel[]) => {
     try {
         await generateFile(path, filename, generateCreate(models));
     } catch (e) {
