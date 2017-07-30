@@ -2,7 +2,7 @@ import {IModel} from "../../src/models/interfaces/index";
 
 export const tire: IModel = {
     name: "Tire",
-    fields: [
+    body: [
         {
             field: {
                 name: "f",
@@ -14,7 +14,7 @@ export const tire: IModel = {
 
 export const spec: IModel = {
     name: "Spec",
-    fields: [
+    body: [
         {
             field: {
                 name: "manufacturer",
@@ -26,7 +26,7 @@ export const spec: IModel = {
 
 export const car: IModel = {
     name: "Car",
-    fields: [
+    body: [
         {
             field: {
                 name: "seats",

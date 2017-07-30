@@ -6,7 +6,7 @@ export const generateCreate = (model: IModel) =>
     ${model.name.toLowerCase()} = graphene.Field(data.api.types.${model.name}Type)
 
     class Input:
-${parseInputs(model.inputs)}
+${parseInputs(model.body)}
 
     @classmethod
     def mutate_and_get_payload(cls, args, c, i):`;

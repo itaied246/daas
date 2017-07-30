@@ -5,7 +5,7 @@ describe("generate models", () => {
 
     const tire: IModel = {
         name: "Tire",
-        fields: [
+        body: [
             {
                 field: {
                     name: "width",
@@ -17,7 +17,7 @@ describe("generate models", () => {
 
     const spec: IModel = {
         name: "Spec",
-        fields: [
+        body: [
             {
                 field: {
                     name: "manufacturer",

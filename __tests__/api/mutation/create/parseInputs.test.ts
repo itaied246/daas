@@ -9,8 +9,14 @@ describe("parseInputs", () => {
             `        volume = graphene.Int()`;
 
         const actual: IField = {
-            name: "volume",
-            type: "Int()",
+            field: {
+                name: "volume",
+                type: "_",
+            },
+            input: {
+                name: "volume",
+                type: "Int()",
+            },
         };
 
         expect(parseInputs([actual])).toEqual(expected);
@@ -25,12 +31,24 @@ describe("parseInputs", () => {
 
         const actual: IField[] = [
             {
-                name: "volume",
-                type: "Int()",
+                field: {
+                    name: "volume",
+                    type: "_",
+                },
+                input: {
+                    name: "volume",
+                    type: "Int()",
+                },
             },
             {
-                name: "seats",
-                type: "Int(required=True)",
+                field: {
+                    name: "seats",
+                    type: "_",
+                },
+                input: {
+                    name: "seats",
+                    type: "Int(required=True)",
+                },
             },
         ];
 

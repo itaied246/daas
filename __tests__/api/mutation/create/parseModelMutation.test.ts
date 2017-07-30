@@ -14,15 +14,18 @@ describe("parseModelMutation", () => {
 
         const actual: IModel = {
             name: "Spec",
-            fields: [
+            body: [
                 {
+                    field: {
+                        name: "volume",
+                        type: "_",
+                    },
+                    input:
+                        {
+                            name: "volume",
+                            type: "_",
+                        },
 
-                }
-            ],
-            inputs: [
-                {
-                    name: "volume",
-                    type: "_",
                 },
             ],
         };

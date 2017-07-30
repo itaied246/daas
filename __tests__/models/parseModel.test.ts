@@ -18,7 +18,7 @@ describe("parse django model", () => {
 
     test("multiple fields", () => {
         const actual: IModel = {
-            fields: [
+            body: [
                 {
                     field: {
                         name: "f1",
