@@ -3,7 +3,7 @@ import {generateFile} from "./generateFile";
 import {generateCreate} from "../api/mutation/create/generateCreate";
 import {logger} from "../utils/logger";
 
-const path = "api/mutation";
+const path = "api/mutations";
 const filename = `create.py`;
 
 export const generateCreationFile = async (models: IModel[]) => {

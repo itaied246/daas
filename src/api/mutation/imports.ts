@@ -2,4 +2,4 @@ export const imports =
     `# -*- coding: utf-8 -*-
 
 import graphene
-import data.api.mutation.create`;
+import data.api.mutations.create`;
