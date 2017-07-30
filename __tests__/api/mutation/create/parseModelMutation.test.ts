@@ -6,7 +6,7 @@ describe("parseModelMutation", () => {
     test("parse model with single input", () => {
 
         const expected =
-            `        spec = Spec(
+            `        spec = data.models.Spec(
             volume=args.get('volume')
         )
         spec.save()
@@ -37,7 +37,7 @@ describe("parseModelMutation", () => {
     test("parse model with different input and field names", () => {
 
         const expected =
-            `        spec = Spec(
+            `        spec = data.models.Spec(
             volume=args.get('VOLUME')
         )
         spec.save()
@@ -68,7 +68,7 @@ describe("parseModelMutation", () => {
     test("parse model with multiple inputs", () => {
 
         const expected =
-            `        spec = Spec(
+            `        spec = data.models.Spec(
             volume=args.get('volume')
             seats=args.get('seats')
         )

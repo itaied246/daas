@@ -11,7 +11,7 @@ const parseInputArgs = (body: IField[]) =>
 export const parseModelMutation = (model: IModel) => {
     const instance = model.name.toLowerCase();
 
-    return `        ${instance} = ${model.name}(
+    return `        ${instance} = data.models.${model.name}(
 ${parseInputArgs(model.body)}
         )
         ${instance}.save()
