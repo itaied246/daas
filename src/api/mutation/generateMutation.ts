@@ -12,4 +12,5 @@ export const generateMutation = (models: IModel[]) =>
 
 
 class Mutation(graphene.AbstractType):
-${parseMutationModels(models)}`;
+${parseMutationModels(models)}
+`;
