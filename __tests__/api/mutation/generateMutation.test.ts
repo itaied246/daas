@@ -8,12 +8,12 @@ describe("generate mutation class", () => {
             `# -*- coding: utf-8 -*-
 
 import graphene
-import data.api.mutation.create
+import data.api.mutations.create
 
 
 class Mutation(graphene.AbstractType):
-    new_tire = data.api.mutation.create.CreateTire.Field()
-    new_spec = data.api.mutation.create.CreateSpec.Field()
+    new_tire = data.api.mutations.create.CreateTire.Field()
+    new_spec = data.api.mutations.create.CreateSpec.Field()
 `;
 
         const actual = generateMutation([tire, spec]);
