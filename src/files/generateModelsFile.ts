@@ -6,7 +6,7 @@ import {logger} from "../utils";
 const filename = "models.py";
 const path = ".";
 
-export const generateModelsFile = async (models: [IModel]) => {
+export const generateModelsFile = async (models: IModel[]) => {
     try {
         await generateFile(path, filename, generateModels(models));
     } catch (e) {

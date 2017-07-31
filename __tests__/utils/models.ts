@@ -1,32 +1,46 @@
 import {IModel} from "../../src/models/interfaces/index";
 
 export const tire: IModel = {
-    fields: [
+    name: "Tire",
+    body: [
         {
-            name: "f",
-            type: "IntegerField()",
+            field: {
+                name: "f",
+                type: "IntegerField()",
+            },
         },
     ],
-    name: "Tire",
 };
 
 export const spec: IModel = {
-    fields: [
+    name: "Spec",
+    body: [
         {
-            name: "manufacturer",
-            type: "TextField()",
+            field: {
+                name: "manufacturer",
+                type: "TextField()",
+            },
+            input: {
+                name: "manufacturer",
+                type: "String(required=True)",
+            },
         },
     ],
-    name: "Spec",
 };
 
 export const car: IModel = {
-    fields: [
+    name: "Car",
+    body: [
         {
-            name: "seats",
-            type: "IntegerField()",
+            field: {
+                name: "seats",
+                type: "IntegerField()",
+            },
+            input: {
+                name: "seats",
+                type: "Int(required=True)",
+            },
         },
     ],
-    name: "Car",
     description: "Car model description.",
 };

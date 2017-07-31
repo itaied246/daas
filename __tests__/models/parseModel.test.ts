@@ -18,14 +18,18 @@ describe("parse django model", () => {
 
     test("multiple fields", () => {
         const actual: IModel = {
-            fields: [
+            body: [
                 {
-                    name: "f1",
-                    type: "IntegerField()",
+                    field: {
+                        name: "f1",
+                        type: "IntegerField()",
+                    },
                 },
                 {
-                    name: "f2",
-                    type: "TextField()",
+                    field: {
+                        name: "f2",
+                        type: "TextField()",
+                    },
                 },
             ],
             name: "Tire",

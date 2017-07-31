@@ -1,24 +1,28 @@
-import { generateModels } from "../../src/models";
-import { IModel } from "../../src/models/interfaces";
+import {generateModels} from "../../src/models";
+import {IModel} from "../../src/models/interfaces";
 
 describe("generate models", () => {
 
     const tire: IModel = {
         name: "Tire",
-        fields: [
+        body: [
             {
-                name: "width",
-                type: "IntegerField()",
+                field: {
+                    name: "width",
+                    type: "IntegerField()",
+                },
             },
         ],
     };
 
     const spec: IModel = {
         name: "Spec",
-        fields: [
+        body: [
             {
-                name: "manufacturer",
-                type: "TextField()",
+                field: {
+                    name: "manufacturer",
+                    type: "TextField()",
+                },
             },
         ],
     };
@@ -27,7 +31,7 @@ describe("generate models", () => {
         const actual = generateModels([tire]);
 
         const expected =
-`# -*- coding: utf-8 -*-
+            `# -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
 from django.db import models
@@ -44,7 +48,7 @@ class Tire(models.Model):
         const actual = generateModels([tire, spec]);
 
         const expected =
-`# -*- coding: utf-8 -*-
+            `# -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
 from django.db import models
